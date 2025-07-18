@@ -192,7 +192,7 @@ class DisciplineApp:
         info_text = (
             f"Pontos Acumulados: {discipline.accumulated_pts}\n"
             f"Média Provisória: {prov:.2f}/20\n"
-            f"Pontos Em Falta: {missing:.2f}\n"
+            f"Pontos Em Falta Para Provisória 10: {missing:.2f}\n"
         )
 
         lbl_info = tk.Label(frame, text=info_text, font=("Arial", 12), bg="white", justify="left")
