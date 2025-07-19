@@ -1,3 +1,4 @@
+from math import ceil
 class Discipline:
     def __init__(self, name, max_points):
         self.name = name
@@ -14,7 +15,7 @@ class Discipline:
 
     # Função para calcular a provisória
     def calculate_provisional_pts(self):
-        self.provisional_pts = (self.accumulated_pts * 20) / self.max_points
+        self.provisional_pts = ceil((self.accumulated_pts * 20) / self.max_points)
         return self.provisional_pts
 
     # Funcão para calcular os pontos necessários para atingir a provisória miníma
