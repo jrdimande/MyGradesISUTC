@@ -4,6 +4,7 @@ from src.controllers.DisciplineManager import DisciplineManager
 from src.data.StorageJSON import StorageJSON
 import charts
 
+
 class DisciplineApp:
     def __init__(self, master):
         self.master = master
@@ -47,7 +48,7 @@ class DisciplineApp:
 
         self.frame_buttons_top = tk.Frame(self.frame, bg="white")
         self.frame_buttons_top.grid(row=2, column=0, columnspan=2, sticky="ew", padx=15, pady=(5, 15))
-        self.frame_buttons_top.grid_columnconfigure((0,1,2), weight=1, uniform="group1")
+        self.frame_buttons_top.grid_columnconfigure((0, 1, 2), weight=1, uniform="group1")
 
         style = ttk.Style()
         style.theme_use('clam')
@@ -75,7 +76,7 @@ class DisciplineApp:
 
         self.frame_buttons_bottom = tk.Frame(self.frame, bg="white")
         self.frame_buttons_bottom.grid(row=4, column=0, columnspan=2, sticky="ew", padx=15, pady=15)
-        self.frame_buttons_bottom.grid_columnconfigure((0,1,2,3,4), weight=1, uniform="group2")
+        self.frame_buttons_bottom.grid_columnconfigure((0, 1, 2, 3, 4), weight=1, uniform="group2")
 
         self.btn_save = ttk.Button(self.frame_buttons_bottom, text="Guardar",
                                    command=self.save_data, style='Rounded.TButton')
@@ -203,7 +204,14 @@ class DisciplineApp:
 
         if discipline.points:
             for p in discipline.points:
-                lbl = tk.Label(frame, text=f"{p['Type']}: {p['points']} pts", bg="white", font=("Arial", 11), anchor="w", justify="left")
+                lbl = tk.Label(frame,
+                               text=f"{p['Type']}: {p['points']} pts"
+                               , bg="white",
+                               font=("Arial", 11),
+                               anchor="w",
+                               justify="left"
+                               )
+
                 lbl.pack(anchor="w", padx=25)
         else:
             lbl = tk.Label(frame, text="Sem avaliações ainda.", bg="white", font=("Arial", 11, "italic"))
