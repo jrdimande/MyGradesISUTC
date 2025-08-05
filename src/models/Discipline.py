@@ -1,4 +1,6 @@
 from math import ceil
+
+
 class Discipline:
     def __init__(self, name, max_points):
         self.name = name
@@ -9,9 +11,9 @@ class Discipline:
 
     # Função para adicionar pontos
     def add_points(self, assessment_type, points):
-        if (points >= 0 ):
+        if points >= 0:
             self.accumulated_pts += points
-            self.points.append({"Type" : assessment_type, "points" : points })
+            self.points.append({"Type": assessment_type, "points": points})
 
     # Função para calcular a provisória
     def calculate_provisional_pts(self):
@@ -27,6 +29,3 @@ class Discipline:
             missing = 0
 
         return missing
-
-
-
