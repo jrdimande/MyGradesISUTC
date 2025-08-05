@@ -1,5 +1,6 @@
 import json
 
+
 class StorageJSON:
     @staticmethod
     def save_data(path, disciplines):
