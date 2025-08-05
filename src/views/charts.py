@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 
 # Função para mostrar grafico de pizza
+
+
 def show_pizza_for_discipline(assessments):
     labels = [a['Type'] for a in assessments]
     points = [a['points'] for a in assessments]
@@ -10,6 +12,8 @@ def show_pizza_for_discipline(assessments):
     plt.show()
 
 # Função para mostrar gráfico de linha
+
+
 def show_line_chart_for_discipline(assessments):
     labels = [a['Type'] for a in assessments]
     points = [a['points'] for a in assessments]
