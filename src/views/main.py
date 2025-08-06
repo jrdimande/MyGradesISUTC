@@ -192,7 +192,7 @@ class DisciplineApp:
 
         info_text = (
             f"Pontos Acumulados: {discipline.accumulated_pts}\n"
-            f"Média Provisória: {prov:.2f}/20\n"
+            f"Média Provisória: {prov}/20\n"
             f"Pontos Em Falta Para Provisória 10: {missing:.2f}\n"
         )
 
